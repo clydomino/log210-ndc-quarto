@@ -565,5 +565,33 @@
     "title": "Appendix A — Exercice : Coder des méthodes à partir des diagrammes de séquence",
     "section": "",
     "text": "Astuce\n\n\n\nVous pouvez utiliser VSCode pour vous aider avec le TypeScript, mais cet outil n’est pas forcément permis lors d’un examen.\n\n\nVoici un modèle à suivre. Pour le diagramme suivant :\n\n\n\nFigure A.1: Exemple de diagramme de séquence.\n\n\nOn code les classes suivantes en TypeScript :\nclass A {\n    b: B;  // A envoie un message à B, visibilité d'attribut\n    execute(arg0:number):any {\n        const result = this.b.setItem(\"Fred\");\n    }\n}\n\nclass B {\n    setItem(arg0:string):any {\n        //...\n    }\n}\n\nÉcrire le code pour la figure suivante.\n\n\n\nÉcrire le code pour la figure suivante décrivant la création de la collection de Vente (tirée de Larman 2005, figure. 17.6).\n\n\n\nÉcrire le code pour la figure suivante décrivant l’utilisation d’un Cornet dans le jeu de Monopoly (tirée de Larman 2005, fig. F22.9)\n\n\n\nÉcrire le code pour les figures suivantes décrivant les appels polymorphes de la méthode atterrirSur dans le jeu de Monopoly (tirées de Larman 2005, fig. F22.6 et F22.7)\n\n\n\n\n\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
+  },
+  {
+    "objectID": "Template-Classes_conceptuelles_dans_le_MDD.html",
+    "href": "Template-Classes_conceptuelles_dans_le_MDD.html",
+    "title": "Appendix B — Exercice : Classes conceptuelles dans le MDD",
+    "section": "",
+    "text": "À partir du cas d’utilisation à la fin de à cet exercice, trouvez des classes conceptuelles candidates avec les deux méthodes proposées dans la section 9.5 du livre :"
+  },
+  {
+    "objectID": "Template-Classes_conceptuelles_dans_le_MDD.html#par-catégories-de-classes",
+    "href": "Template-Classes_conceptuelles_dans_le_MDD.html#par-catégories-de-classes",
+    "title": "Appendix B — Exercice : Classes conceptuelles dans le MDD",
+    "section": "B.1 Par catégories de classes",
+    "text": "B.1 Par catégories de classes\nProposer les classes candidates provenant du cas d’utilisation selon les catégories de classes\n\n\n\n\n\n\n\nCatégorie de classe conceptuelle\nClasses candidates selon le cas d’utilisation"
+  },
+  {
+    "objectID": "Template-Classes_conceptuelles_dans_le_MDD.html#à-laide-de-groupes-nominaux",
+    "href": "Template-Classes_conceptuelles_dans_le_MDD.html#à-laide-de-groupes-nominaux",
+    "title": "Appendix B — Exercice : Classes conceptuelles dans le MDD",
+    "section": "B.2 À l’aide de groupes nominaux",
+    "text": "B.2 À l’aide de groupes nominaux\nC’est l’analyse linguistique consistant à repérer les noms et les groupes nominaux dans la description textuelle d’un domaine."
+  },
+  {
+    "objectID": "Template-Classes_conceptuelles_dans_le_MDD.html#cas-dutilisation---réserver-un-livre-de-la-bibliothèque",
+    "href": "Template-Classes_conceptuelles_dans_le_MDD.html#cas-dutilisation---réserver-un-livre-de-la-bibliothèque",
+    "title": "Appendix B — Exercice : Classes conceptuelles dans le MDD",
+    "section": "B.3 Cas d’utilisation - Réserver un livre de la bibliothèque",
+    "text": "B.3 Cas d’utilisation - Réserver un livre de la bibliothèque\nParties prenantes et intérêts  :\n- Le Membre. Il veut un moyen de recherche exact et rapide et ne veut pas que la Bibliothèque mémorise des informations sur ses recherches (confidentialité). Il veut pouvoir réaliser des réservations aisément, obtenir un service rapide en fournissant un minimum d’efforts. Il veut également une preuve de réservation.\n- La Bibliothèque. Elle veut enregistrer correctement les réservations et satisfaire les souhaits des membres.\nPréconditions  : Le Membre est identifié et authentifié\nActeur principal  : Membre\n\nLe membre choisit la fonction «  recherche  » et saisit du texte décrivant le livre (par exemple, une partie du titre, «  UML  »).\nLe système affiche une liste de livres (le titre, l’auteur et l’année) correspondant à la recherche, par exemple, «  UML2 et les design patterns, Craig Larman, 2005  » et «  UML par la pratique, Pascal Rocques, 2009  ».\nLe membre choisit un livre parmi les résultats, par exemple, «  UML2 et les design patterns, Craig Larman, 2005  ».\nLe système affiche les informations détaillées du livre (le titre, l’auteur, le numéro ISBN, la maison d’édition, le numéro de l’édition et l’année) ainsi que la liste de tous les exemplaires du livre indiquant s’ils sont disponibles ou pas, par exemple, deux exemplaires du livre «  UML2 et les design patterns  », un avec l’identificateur d’exemplaire «  1  » qui est disponible et un avec l’identificateur d’exemplaire «  2  » qui n’est pas disponible.\nLe membre réserve un exemplaire du livre qui est disponible.\nLe système confirme la réservation en affichant un numéro de réservation avec le nom du membre et le code de l’exemplaire du livre.\n\nExtensions (scénarios alternatifs)  :\n\nAucun livre ne correspond au texte de la recherche.\n\nLe système affiche un message indiquant qu’aucun livre n’a été trouvé.\nLe membre lance une nouvelle recherche.\n\n\n\n\nTous les exemplaires ne sont pas disponibles.\n\nLe système affiche toutes les informations du livre et des exemplaires, mais un message indique qu’il n’est pas possible de réserver, faute d’exemplaires disponibles.\nLe membre lance une nouvelle recherche."
   }
 ]
