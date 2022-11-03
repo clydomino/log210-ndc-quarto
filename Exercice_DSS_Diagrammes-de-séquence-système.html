@@ -258,7 +258,13 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#cas-dutilisation---réserver-un-livre-de-la-bibliothèque" id="toc-cas-dutilisation---réserver-un-livre-de-la-bibliothèque" class="nav-link active" data-scroll-target="#cas-dutilisation---réserver-un-livre-de-la-bibliothèque">Cas d’utilisation - Réserver un livre de la bibliothèque</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -279,9 +285,41 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p><em>Je ne recommande pas LucidChart et d’autres outils ayant juste des profils UML, puisqu’ils ne sont pas bien adaptés (voir les notes de cours de LOG210 pour plus d’explications).</em></p>
 </blockquote>
+<section id="cas-dutilisation---réserver-un-livre-de-la-bibliothèque" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="cas-dutilisation---réserver-un-livre-de-la-bibliothèque">Cas d’utilisation - Réserver un livre de la bibliothèque</h2>
+<p><strong>Parties prenantes et intérêts</strong><span style="white-space:nowrap">&nbsp; :</span><br>
+- <strong>Le Membre.</strong> Il veut un moyen de recherche exact et rapide et ne veut pas que la Bibliothèque mémorise des informations sur ses recherches (confidentialité). Il veut pouvoir réaliser des réservations aisément, obtenir un service rapide en fournissant un minimum d’efforts. Il veut également une preuve de réservation.<br>
+- <strong>La Bibliothèque.</strong> Elle veut enregistrer correctement les réservations et satisfaire les souhaits des membres.<br>
+<strong>Préconditions</strong><span style="white-space:nowrap">&nbsp; :</span> Le Membre est identifié et authentifié<br>
+<strong>Acteur <span style="white-space:nowrap">principal&nbsp; :</span> Membre</strong></p>
+<ol type="1">
+<li><p>Le membre choisit la fonction <span style="white-space:nowrap">« &nbsp;recherche&nbsp; »</span> et saisit du texte décrivant le livre (par exemple, une partie du titre, <span style="white-space:nowrap">« &nbsp;UML&nbsp; »).</span></p></li>
+<li><p>Le système affiche une liste de livres (le titre, l’auteur et l’année) correspondant à la recherche, par exemple, <span style="white-space:nowrap">« &nbsp;UML2</span> et les design patterns, Craig <span style="white-space:nowrap">Larman,&nbsp;2005&nbsp; »</span> et <span style="white-space:nowrap">« &nbsp;UML</span> par la pratique,&nbsp;Pascal Rocques, <span style="white-space:nowrap">2009&nbsp; ».</span></p></li>
+<li><p>Le membre choisit un livre parmi les résultats, par exemple, <span style="white-space:nowrap">« &nbsp;UML2</span> et les design patterns, Craig <span style="white-space:nowrap">Larman,&nbsp;2005&nbsp; ».</span></p></li>
+<li><p>Le système affiche les informations détaillées du livre (le titre, l’auteur, le numéro ISBN, la maison d’édition, le numéro de l’édition et l’année) ainsi que la liste de tous les exemplaires du livre indiquant s’ils sont disponibles ou pas, par exemple, deux exemplaires du livre <span style="white-space:nowrap">« &nbsp;UML2</span> et les design <span style="white-space:nowrap">patterns&nbsp; »,</span> un avec l’identificateur d’exemplaire <span style="white-space:nowrap">« &nbsp;1&nbsp; »</span> qui est disponible et un avec l’identificateur d’exemplaire <span style="white-space:nowrap">« &nbsp;2&nbsp; »</span> qui n’est pas disponible.</p></li>
+<li><p>Le membre réserve un exemplaire du livre qui est disponible.</p></li>
+<li><p>Le système confirme la réservation en affichant un numéro de réservation avec le nom du membre et le code de l’exemplaire du livre.</p></li>
+</ol>
+<p>Extensions (scénarios <span style="white-space:nowrap">alternatifs)&nbsp; :</span></p>
+<ol start="2" type="1">
+<li><p>Aucun livre ne correspond au texte de la recherche.</p>
+<ol type="1">
+<li><p>Le système affiche un message indiquant qu’aucun livre n’a été trouvé.</p></li>
+<li><p>Le membre lance une nouvelle recherche.</p></li>
+</ol></li>
+</ol>
+<!-- -->
+<ol start="4" type="1">
+<li><p>Tous les exemplaires ne sont pas disponibles.</p>
+<ol type="1">
+<li><p>Le système affiche toutes les informations du livre et des exemplaires, mais un message indique qu’il n’est pas possible de réserver, faute d’exemplaires disponibles.</p></li>
+<li><p>Le membre lance une nouvelle recherche.</p></li>
+</ol></li>
+</ol>
 <p>(Votre DSS devrait apparaître plus bas)</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
