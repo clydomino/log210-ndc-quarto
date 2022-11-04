@@ -677,5 +677,82 @@
     "title": "Appendix I — Exercices diagramme d’états",
     "section": "I.2 Exercice 2",
     "text": "I.2 Exercice 2\nFaire un diagramme d’états en UML qui correspond au système décrit par les cas d’utilisation suivants (format bref) :\nS’authentifier. Le Client arrive à un guichet automatique bancaire, car il désire effectuer une transaction sur son compte. Le Client introduit sa carte bancaire et le système attend qu’il saisisse le NIP de la carte. Si le NIP est valide pour la carte, alors le système est prêt pour accepter d’autres actions. Sinon, le système enregistre la mauvaise tentative et demande de nouveau au Client de saisir son NIP. À tout moment que le système possède la carte du Client, ce dernier peut annuler la session pour récupérer sa carte.\nGérer guichet. L’Administrateur démarre le système et le système attend l’introduction d’une carte bancaire du Client. Quand le système est dans cet état, l’Administrateur peut aussi l’éteindre."
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html",
+    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
+    "section": "",
+    "text": "Dans cet exercice, vous allez mieux comprendre la relation entre les principes GRASP et les patrons GoF. La figure suivante est tirée du livre de Larman, Figure A26.3/F23.3) :\nUne bonne ressource pour les patterns est la suivante :\nhttps://fuhrmanator.github.io/oodp-horstmann/htm/index_fr_en.html"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#itérateur",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html#itérateur",
+    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
+    "section": "J.1 Itérateur",
+    "text": "J.1 Itérateur\nIdentifiez les 4 principes GRASP dans le patron Itérateur, selon les directives dans les notes de cours à la section 14.3 :"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#observateur",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html#observateur",
+    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
+    "section": "J.2 Observateur",
+    "text": "J.2 Observateur\nIdentifiez les 4 principes GRASP dans le patron Observateur, selon les directives dans les notes de cours à la section 14.3 :"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#stratégie",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html#stratégie",
+    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
+    "section": "J.3 Stratégie",
+    "text": "J.3 Stratégie\nIdentifiez les 4 principes GRASP dans le patron Stratégie, selon les directives dans les notes de cours à la section 14.3 :"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#composite",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html#composite",
+    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
+    "section": "J.4 Composite",
+    "text": "J.4 Composite\nIdentifiez les 4 principes GRASP dans le patron Composite, selon les directives dans les notes de cours à la section 14.3 :"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#décorateur",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html#décorateur",
+    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
+    "section": "J.5 Décorateur",
+    "text": "J.5 Décorateur\nIdentifiez les 4 principes GRASP dans le patron Décorateur, selon les directives dans les notes de cours à la section 14.3 :"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-template",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-template",
+    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
+    "section": "J.6 Méthode Template",
+    "text": "J.6 Méthode Template\n \nPatron TEMPLATE METHOD"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#commande",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html#commande",
+    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
+    "section": "J.7 Commande",
+    "text": "J.7 Commande\nIdentifiez les 4 principes GRASP dans le patron Commande, selon les directives dans les notes de cours à la section 14.3 :"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-fabrique",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-fabrique",
+    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
+    "section": "J.8 Méthode Fabrique",
+    "text": "J.8 Méthode Fabrique\nIdentifiez les 4 principes GRASP dans le patron Méthode fabrique, selon les directives dans les notes de cours à la section 14.3 :"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#proxy",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html#proxy",
+    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
+    "section": "J.9 Proxy",
+    "text": "J.9 Proxy\nIdentifiez les 4 principes GRASP dans le patron Proxy, selon les directives dans les notes de cours à la section 14.3 :"
+  },
+  {
+    "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#façade",
+    "href": "Exercice_Identifier_GRASP_dans_GoF.html#façade",
+    "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
+    "section": "J.10 Façade",
+    "text": "J.10 Façade\nIdentifiez les 4 principes GRASP dans le patron Façade, selon les directives dans les notes de cours à la section 14.3 :"
   }
 ]
