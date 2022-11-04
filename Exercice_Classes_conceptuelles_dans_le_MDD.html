@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Exercice_Créer_des_méthodes_à_partir_des_diagrammes_d_interaction.html" rel="next">
+<link href="./Exercice_Classes_conceptuelles_dans_le_MDD_suite.html" rel="next">
 <link href="./ExercicesCoderSequence.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -239,17 +239,22 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercice_Créer_des_méthodes_à_partir_des_diagrammes_d_interaction.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Création des méthodes à partir des diagrammes d’interaction</span></a>
+  <a href="./Exercice_Classes_conceptuelles_dans_le_MDD_suite.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Exercice MDD (classes, attributs, associations)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercice_Contrats_d_opération.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Exercice Contrats d’opération</span></a>
+  <a href="./Exercice_Créer_des_méthodes_à_partir_des_diagrammes_d_interaction.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Création des méthodes à partir des diagrammes d’interaction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercice_DSS_Diagrammes-de-séquence-système.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Diagrammes de séquence système (DSS)</span></a>
+  <a href="./Exercice_Contrats_d_opération.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">E</span>&nbsp; <span class="chapter-title">Exercice Contrats d’opération</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Exercice_DSS_Diagrammes-de-séquence-système.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">F</span>&nbsp; <span class="chapter-title">Diagrammes de séquence système (DSS)</span></a>
   </div>
 </li>
       </ul>
@@ -265,15 +270,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#par-catégories-de-classes" id="toc-par-catégories-de-classes" class="nav-link active" data-scroll-target="#par-catégories-de-classes"><span class="toc-section-number">B.1</span>  Par catégories de classes</a></li>
   <li><a href="#à-laide-de-groupes-nominaux" id="toc-à-laide-de-groupes-nominaux" class="nav-link" data-scroll-target="#à-laide-de-groupes-nominaux"><span class="toc-section-number">B.2</span>  À l’aide de groupes nominaux</a></li>
-  <li><a href="#diagramme-de-classes-conceptuelles" id="toc-diagramme-de-classes-conceptuelles" class="nav-link" data-scroll-target="#diagramme-de-classes-conceptuelles"><span class="toc-section-number">B.3</span>  Diagramme de classes conceptuelles</a></li>
-  <li><a href="#section-1-cas-dutilisation" id="toc-section-1-cas-dutilisation" class="nav-link" data-scroll-target="#section-1-cas-dutilisation"><span class="toc-section-number">B.4</span>  Section 1 : Cas d’utilisation</a>
-  <ul class="collapse">
-  <li><a href="#sec-usecases" id="toc-sec-usecases" class="nav-link" data-scroll-target="#sec-usecases"><span class="toc-section-number">B.4.1</span>  Cas d’utilisation - Réserver un livre de la bibliothèque</a></li>
-  </ul></li>
-  <li><a href="#sec-classes" id="toc-sec-classes" class="nav-link" data-scroll-target="#sec-classes"><span class="toc-section-number">B.5</span>  Section 2 : Classes candidates et groupes nominaux</a>
-  <ul class="collapse">
-  <li><a href="#groupes-nominaux" id="toc-groupes-nominaux" class="nav-link" data-scroll-target="#groupes-nominaux"><span class="toc-section-number">B.5.1</span>  Groupes nominaux</a></li>
-  </ul></li>
+  <li><a href="#sec-usecases" id="toc-sec-usecases" class="nav-link" data-scroll-target="#sec-usecases"><span class="toc-section-number">B.3</span>  Cas d’utilisation - Réserver un livre de la bibliothèque</a></li>
   </ul>
 </nav>
     </div>
@@ -330,33 +327,8 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="B.2" class="anchored" data-anchor-id="à-laide-de-groupes-nominaux"><span class="header-section-number">B.2</span> À l’aide de groupes nominaux</h2>
 <p>C’est l’analyse linguistique consistant à repérer les noms et les groupes nominaux dans la description textuelle d’un domaine.</p>
 </section>
-<section id="diagramme-de-classes-conceptuelles" class="level2" data-number="B.3">
-<h2 data-number="B.3" class="anchored" data-anchor-id="diagramme-de-classes-conceptuelles"><span class="header-section-number">B.3</span> Diagramme de classes conceptuelles</h2>
-<p>À partir du <a href="#sec-usecases">cas d’utilisation de la section 1</a>, esquissez le Modèle du domaine correspondant au domaine de l’application.</p>
-<ol type="1">
-<li><p>Considérez les <a href="#sec-classes">classes candidates identifiées par catégorie et les groupes nominaux</a> provenant de l’exercice précédent (une liste est dans la section 2).</p></li>
-<li><p>Notez que les classes candidates et groupes nominaux ne sont pas tous les classes ou attributs (certains n’ont rien à voir avec le problème du domaine). Vous devez appliquer les directives vues dans le chapitre 9 du livre.</p></li>
-<li><p>Tout attribut doit avoir un type.</p></li>
-<li><p>Limitez-vous à des associations «&nbsp;mémorisables&nbsp;» dans le contexte de l’application du logiciel (ne pas faire des associations hors de la portée du cas d’utilisation).</p></li>
-<li><p>Vérifiez les cardinalités.</p></li>
-<li><p>Vérifiez les verbes sur les associations ainsi que le sens de lecture.</p></li>
-</ol>
-<p>Pour faire votre <span style="white-space:nowrap">modèle :</span></p>
-<blockquote class="blockquote">
-<p><em>Vous pouvez les dessiner à la main et en prendre une photo.</em></p>
-<p><em>Vous pouvez également utiliser <span style="white-space:nowrap">PlantUML :</span></em></p>
-</blockquote>
-<ul>
-<li><p><em><a href="https://www.youtube.com/watch?v=xkwJ9GwgZJU">tutoriel VSCode sur YouTube</a></em></p></li>
-<li><p><em><a href="https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571">PlantUML Gizmo</a>, module supplémentaire Google Docs,</em></p></li>
-<li><p><a href="https://www.planttext.com/"><em>PlantText.com</em></a></p></li>
-</ul>
-<p>(Votre MDD devrait apparaître ci-bas)</p>
-</section>
-<section id="section-1-cas-dutilisation" class="level2" data-number="B.4">
-<h2 data-number="B.4" class="anchored" data-anchor-id="section-1-cas-dutilisation"><span class="header-section-number">B.4</span> Section 1 : Cas d’utilisation</h2>
-<section id="sec-usecases" class="level3" data-number="B.4.1">
-<h3 data-number="B.4.1" class="anchored" data-anchor-id="sec-usecases"><span class="header-section-number">B.4.1</span> Cas d’utilisation - Réserver un livre de la bibliothèque</h3>
+<section id="sec-usecases" class="level2" data-number="B.3">
+<h2 data-number="B.3" class="anchored" data-anchor-id="sec-usecases"><span class="header-section-number">B.3</span> Cas d’utilisation - Réserver un livre de la bibliothèque</h2>
 <p><strong>Parties prenantes et intérêts</strong><span style="white-space:nowrap">&nbsp; :</span><br>
 - <strong>Le Membre.</strong> Il veut un moyen de recherche exact et rapide et ne veut pas que la Bibliothèque mémorise des informations sur ses recherches (confidentialité). Il veut pouvoir réaliser des réservations aisément, obtenir un service rapide en fournissant un minimum d’efforts. Il veut également une preuve de réservation.<br>
 - <strong>La Bibliothèque.</strong> Elle veut enregistrer correctement les réservations et satisfaire les souhaits des membres.<br>
@@ -386,80 +358,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Le membre lance une nouvelle recherche.</p></li>
 </ol></li>
 </ol>
-</section>
-</section>
-<section id="sec-classes" class="level2" data-number="B.5">
-<h2 data-number="B.5" class="anchored" data-anchor-id="sec-classes"><span class="header-section-number">B.5</span> Section 2 : Classes candidates et groupes nominaux</h2>
-<p>Cette liste est le résultat de l’application des méthodes 2 et 3 pour trouver les classes candidates et groupes nominaux (c’est une solution possible de l’exercice précédent).</p>
-<table class="table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;"><strong>Catégorie de classe conceptuelle</strong></th>
-<th style="text-align: left;"><strong>Classes candidates selon le cas d’utilisation</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Transactions d’entreprise</td>
-<td style="text-align: left;">Réservation</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Rôles des personnes, organisation</td>
-<td style="text-align: left;">Membre, Bibliothèque</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Produit ou service en liaison avec une transaction ou une ligne de transaction</td>
-<td style="text-align: left;">Livre, Exemplaire</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Lieu de la transaction</td>
-<td style="text-align: left;">Bibliothèque</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Objets physiques</td>
-<td style="text-align: left;">Livre, Exemplaire</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Descriptions d’objets (<strong>voir <span style="white-space:nowrap">sec.&nbsp;9.13 !</span></strong>)</td>
-<td style="text-align: left;">Livre (décrit la classe Exemplaire dont les objets peuvent tous être empruntés)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Catalogue</td>
-<td style="text-align: left;">CatalogueLivre</td>
-</tr>
-</tbody>
-</table>
-<section id="groupes-nominaux" class="level3" data-number="B.5.1">
-<h3 data-number="B.5.1" class="anchored" data-anchor-id="groupes-nominaux"><span class="header-section-number">B.5.1</span> Groupes nominaux</h3>
-<p>C’est l’analyse linguistique consistant à repérer les noms et les groupes nominaux dans la description textuelle d’un domaine.</p>
-<p><em>N.B. Les groupes nominaux peuvent être des classes ou des attributs, ou peuvent ne pas s’appliquer du tout.</em></p>
-<p>Bibliothèque<br>
-Liste de livres<br>
-Membre<br>
-Nom<br>
-Reservation<br>
-Livre<br>
-Titre<br>
-Auteur<br>
-ISBN<br>
-Maison d’édition<br>
-Numéro de l’édition<br>
-Année<br>
-Exemplaires<br>
-Nombres<br>
-Code<br>
-Disponibilité<br>
-Réservation<br>
-Numéro de confirmation<br>
-Nom du membre<br>
-Code de l’exemplaire</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -582,8 +482,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Exercice_Créer_des_méthodes_à_partir_des_diagrammes_d_interaction.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Création des méthodes à partir des diagrammes d’interaction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Exercice_Classes_conceptuelles_dans_le_MDD_suite.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Exercice MDD (classes, attributs, associations)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
