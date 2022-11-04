@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -30,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Exercice_diagramme_d_états_en_classe.html" rel="next">
+<link href="./Exercice_Diagramme_états.html" rel="next">
 <link href="./Exercice_Adaptateur_pour_Maps_CF.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -239,7 +258,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercice_Classes_conceptuelles_dans_le_MDD_suite.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Exercice MDD (classes, attributs, associations)</span></a>
+  <a href="./Exercice_Diagramme_de_classes_conceptuelles_MDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Exercice : Diagramme de classes conceptuelles (MDD)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -269,7 +288,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercice_diagramme_d_états_en_classe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">Exercices diagramme d’états</span></a>
+  <a href="./Exercice_Diagramme_états.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">Exercices diagramme d’états</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -289,14 +308,7 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table des matières</h2>
-   
-  <ul>
-  <li><a href="#mdd-en-français" id="toc-mdd-en-français" class="nav-link active" data-scroll-target="#mdd-en-français"><span class="toc-section-number">I</span>  MDD en français</a></li>
-  <li><a href="#mdd-en-anglais" id="toc-mdd-en-anglais" class="nav-link" data-scroll-target="#mdd-en-anglais"><span class="toc-section-number">J</span>  MDD en anglais</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -304,21 +316,50 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<ol type="1">
-<li><p>Considérer le MDD pour le jeu de Monopoly (voir plus bas pour le MDD en français et en anglais).</p></li>
-<li><p>Visitez <a href="https://jamboard.google.com/d/12ask7dmSv2dVVd115iYJp4wh2NiSYgqOMQogUt-bBD0/edit?usp=sharing">ce jamboard</a> et choisissez la page pour votre équipe.</p></li>
-<li><p>À l’aide des outils de jamboard, faites les remarques sur la conception <strong>surtout par rapport au MDD et le décalage des représentations</strong>.</p></li>
-</ol>
-<p>Emojiopoly</p>
-<section id="mdd-en-français" class="level1" data-number="I">
-<h1 data-number="I"><span class="header-section-number">I</span> MDD en français</h1>
-<p><img src="images/media/image16.png" class="img-fluid"></p>
+<p>Dans cet exercice, l’objectif est de vous sensibiliser à la facilité de comprendre une conception à partir d’un problème. Un objectif secondaire est de considérer les choix de conception sur un plan de la cohésion et du couplage. Ici, il s’agit du jeu de Monopoly, qui est un exemple proposé par <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> pour lequel il a également proposé un modèle du domaine et une conception, selon la méthodologie.</p>
+<p>Pour cet exercice, nous examinerons une conception orientée objet réelle du jeu de Monopoly disponible sur GitHub, soit <a href="https://github.com/Chuzzy/Emojiopoly">Emojiopoly</a>. Voici le travail à faire.</p>
+<ul>
+<li>Considérez les deux <span style="white-space:nowrap">artefacts :</span>
+<ul>
+<li>un <a href="#sec-MDD_Monopoly">modèle du domaine de Monopoly</a> proposé par <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> (il y a une version en français et en anglais, puisque le code TypeScript est en anglais) et</li>
+<li>un <a href="#sec-DDC_Emojiopoly">modèle d’une solution</a> sous forme de diagramme de classes logicielles, créé à partir du code TypeScript dans le dépôt mentionné ci-haut).</li>
+</ul></li>
+<li>Nous faisons une hypothèse que l’équipe qui a développé Emojiopoly n’ait pas commencé avec le MDD de Larman.</li>
+<li>Comparez ces deux artefacts et faites des remarques sur la conception, <strong>surtout par rapport au MDD et le décalage des représentations</strong>.</li>
+<li>Faites des remarques sur la solution concernant la cohésion et le couplage.</li>
+</ul>
+<section id="sec-DDC_Emojiopoly" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="sec-DDC_Emojiopoly">Diagramme de classes d’Emojiopoly</h2>
+<p>Pour visualiser la conception, nous avons généré un diagramme des classes en UML avec l’outil <a href="https://github.com/bafolts/tplant">tplant</a>:</p>
+<div id="fig-Emojiopoly_classes" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Exercice_Critique_d-une_conception_files/mediabag/a0f38dea2532442a006212d161cb3f8a9b4f8a0e.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;H.1: Diagramme de classes logicielles (TypeScript) pour le projet <a href="https://github.com/Chuzzy/Emojiopoly">Emojiopoly</a></figcaption><p></p>
+</figure>
+</div>
 </section>
-<section id="mdd-en-anglais" class="level1" data-number="J">
-<h1 data-number="J"><span class="header-section-number">J</span> MDD en anglais</h1>
-<p><img src="images/media/image15.png" class="img-fluid"></p>
+<section id="sec-MDD_Monopoly" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="sec-MDD_Monopoly">Modèle du domaine de Monopoly</h2>
+<p>Puisque la solution Emojiopoly est en anglais, vous pouvez regarder le modèle du domaine de Monopoly en français et en anglais pour vous aider à comprendre les termes.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Exercice_Critique_d-une_conception_files/mediabag/588b4d4f6c0bdc1daea2c9040c720cf2eeba0974.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">MDD (version française) de Monopoly proposé par <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span></figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Exercice_Critique_d-une_conception_files/mediabag/061912ea079fcb3b6fe2f8aa8acb1a2702614ee9.svg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">MDD (version anglaise) de Monopoly proposé par <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span></figcaption><p></p>
+</figure>
+</div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-craig_uml_2005" class="csl-entry" role="doc-biblioentry">
+Larman, Craig. 2005. <em><span>UML</span> 2 et design patterns</em>. 3ᵉ éd. Paris: Village Mondial.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -441,7 +482,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Exercice_diagramme_d_états_en_classe.html" class="pagination-link">
+      <a href="./Exercice_Diagramme_états.html" class="pagination-link">
         <span class="nav-page-text"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">Exercices diagramme d’états</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

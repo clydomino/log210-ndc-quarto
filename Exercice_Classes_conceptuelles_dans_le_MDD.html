@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -30,7 +49,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Exercice_Classes_conceptuelles_dans_le_MDD_suite.html" rel="next">
+<link href="./Exercice_Diagramme_de_classes_conceptuelles_MDD.html" rel="next">
 <link href="./ExercicesCoderSequence.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -82,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title d-none d-lg-block">Appendix B — Exercice : Classes conceptuelles dans le MDD</h1>
+      <h1 class="title"><span id="sec-ExerciceClassesConceptuellesMDD" class="quarto-section-identifier d-none d-lg-block">Appendix B — Exercice : Classes conceptuelles dans le MDD</span></h1>
                       </div>
   </div>
     
@@ -239,7 +258,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercice_Classes_conceptuelles_dans_le_MDD_suite.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Exercice MDD (classes, attributs, associations)</span></a>
+  <a href="./Exercice_Diagramme_de_classes_conceptuelles_MDD.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Exercice : Diagramme de classes conceptuelles (MDD)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -269,7 +288,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercice_diagramme_d_états_en_classe.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">Exercices diagramme d’états</span></a>
+  <a href="./Exercice_Diagramme_états.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">Exercices diagramme d’états</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -293,9 +312,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table des matières</h2>
    
   <ul>
-  <li><a href="#par-catégories-de-classes" id="toc-par-catégories-de-classes" class="nav-link active" data-scroll-target="#par-catégories-de-classes"><span class="toc-section-number">B.1</span>  Par catégories de classes</a></li>
-  <li><a href="#à-laide-de-groupes-nominaux" id="toc-à-laide-de-groupes-nominaux" class="nav-link" data-scroll-target="#à-laide-de-groupes-nominaux"><span class="toc-section-number">B.2</span>  À l’aide de groupes nominaux</a></li>
-  <li><a href="#sec-usecases" id="toc-sec-usecases" class="nav-link" data-scroll-target="#sec-usecases"><span class="toc-section-number">B.3</span>  Cas d’utilisation - Réserver un livre de la bibliothèque</a></li>
+  <li><a href="#sec-CU_Réserver_livre" id="toc-sec-CU_Réserver_livre" class="nav-link active" data-scroll-target="#sec-CU_Réserver_livre"><span class="toc-section-number">B.1</span>  Cas d’utilisation - Réserver un livre de la bibliothèque</a></li>
   </ul>
 </nav>
     </div>
@@ -305,86 +322,103 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>À partir du cas d’utilisation à la fin de à cet exercice, trouvez des classes conceptuelles candidates avec les deux méthodes proposées dans la <strong>section 9.5</strong> du <span style="white-space:nowrap">livre :</span></p>
+<p>À partir du <a href="#sec-CU_Réserver_livre">cas d’utilisation <em>Réserver un livre de la bibliothèque</em></a>, trouvez des classes conceptuelles candidates avec les deux méthodes proposées dans la <strong>section 9.5</strong> de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span><span style="white-space:nowrap"> :</span></p>
 <ul>
-<li><p>En utilisant une liste de <a href="MDD.html#sec-categoriesClasses"><strong>catégories de classes</strong></a></p></li>
-<li><p>À l’aide de groupes nominaux</p></li>
+<li>En utilisant une liste de <a href="MDD.html#sec-categoriesClasses"><strong>catégories de classes</strong></a></li>
+<li>À l’aide de groupes nominaux</li>
 </ul>
-<section id="par-catégories-de-classes" class="level2" data-number="B.1">
-<h2 data-number="B.1" class="anchored" data-anchor-id="par-catégories-de-classes"><span class="header-section-number">B.1</span> Par catégories de classes</h2>
+<section id="par-catégories-de-classes" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="par-catégories-de-classes">Par catégories de classes</h2>
 <p>Proposer les classes candidates provenant du cas d’utilisation selon les catégories de classes</p>
 <table class="table">
 <colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
+<col style="width: 40%">
+<col style="width: 60%">
 </colgroup>
 <thead>
 <tr class="header">
-<th><strong>Catégorie de classe conceptuelle</strong></th>
-<th><strong>Classes candidates selon le cas d’utilisation</strong></th>
+<th style="text-align: left;"><a href="MDD.html#sec-categoriesClasses"><strong>Catégorie de classe conceptuelle</strong></a></th>
+<th style="text-align: left;"><strong>Classes candidates selon le cas d’utilisation</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Transaction métier (d’affaires)</td>
-<td>…</td>
+<td style="text-align: left;">Transaction d’affaires (métier)</td>
+<td style="text-align: left;"><em>Réservation</em> (ceci est un exemple)</td>
 </tr>
 <tr class="even">
-<td>…</td>
-<td>…</td>
+<td style="text-align: left;">(continuez avec d’autres catégories)</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td>…</td>
-<td>…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td>…</td>
-<td>…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td>…</td>
-<td>…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="à-laide-de-groupes-nominaux" class="level2" data-number="B.2">
-<h2 data-number="B.2" class="anchored" data-anchor-id="à-laide-de-groupes-nominaux"><span class="header-section-number">B.2</span> À l’aide de groupes nominaux</h2>
-<p>C’est l’analyse linguistique consistant à repérer les noms et les groupes nominaux dans la description textuelle d’un domaine.</p>
+<section id="à-laide-de-groupes-nominaux" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="à-laide-de-groupes-nominaux">À l’aide de groupes nominaux</h2>
+<p>C’est l’analyse linguistique consistant à repérer (souligner ou mettre en surbrillance) les noms et les groupes nominaux dans la description textuelle d’un domaine (dans cet exercice, c’est le <a href="#sec-CU_Réserver_livre">cas d’utilisation <em>Réserver un livre de la bibliothèque</em></a>).</p>
 </section>
-<section id="sec-usecases" class="level2" data-number="B.3">
-<h2 data-number="B.3" class="anchored" data-anchor-id="sec-usecases"><span class="header-section-number">B.3</span> Cas d’utilisation - Réserver un livre de la bibliothèque</h2>
-<p><strong>Parties prenantes et intérêts</strong><span style="white-space:nowrap">&nbsp; :</span><br>
+<section id="sec-CU_Réserver_livre" class="level2" data-number="B.1">
+<h2 data-number="B.1" class="anchored" data-anchor-id="sec-CU_Réserver_livre"><span class="header-section-number">B.1</span> Cas d’utilisation - Réserver un livre de la bibliothèque</h2>
+<p><strong>Parties prenantes et intérêts</strong>:<br>
 - <strong>Le Membre.</strong> Il veut un moyen de recherche exact et rapide et ne veut pas que la Bibliothèque mémorise des informations sur ses recherches (confidentialité). Il veut pouvoir réaliser des réservations aisément, obtenir un service rapide en fournissant un minimum d’efforts. Il veut également une preuve de réservation.<br>
 - <strong>La Bibliothèque.</strong> Elle veut enregistrer correctement les réservations et satisfaire les souhaits des membres.<br>
-<strong>Préconditions</strong><span style="white-space:nowrap">&nbsp; :</span> Le Membre est identifié et authentifié<br>
-<strong>Acteur <span style="white-space:nowrap">principal&nbsp; :</span> Membre</strong></p>
+<strong>Préconditions</strong>: Le Membre est identifié et authentifié<br>
+<strong>Acteur <span style="white-space:nowrap">principal :</span> Membre</strong></p>
 <ol type="1">
-<li><p>Le membre choisit la fonction <span style="white-space:nowrap">« &nbsp;recherche&nbsp; »</span> et saisit du texte décrivant le livre (par exemple, une partie du titre, <span style="white-space:nowrap">« &nbsp;UML&nbsp; »).</span></p></li>
-<li><p>Le système affiche une liste de livres (le titre, l’auteur et l’année) correspondant à la recherche, par exemple, <span style="white-space:nowrap">« &nbsp;UML2</span> et les design patterns, Craig <span style="white-space:nowrap">Larman,&nbsp;2005&nbsp; »</span> et <span style="white-space:nowrap">« &nbsp;UML</span> par la pratique,&nbsp;Pascal Rocques, <span style="white-space:nowrap">2009&nbsp; ».</span></p></li>
-<li><p>Le membre choisit un livre parmi les résultats, par exemple, <span style="white-space:nowrap">« &nbsp;UML2</span> et les design patterns, Craig <span style="white-space:nowrap">Larman,&nbsp;2005&nbsp; ».</span></p></li>
-<li><p>Le système affiche les informations détaillées du livre (le titre, l’auteur, le numéro ISBN, la maison d’édition, le numéro de l’édition et l’année) ainsi que la liste de tous les exemplaires du livre indiquant s’ils sont disponibles ou pas, par exemple, deux exemplaires du livre <span style="white-space:nowrap">« &nbsp;UML2</span> et les design <span style="white-space:nowrap">patterns&nbsp; »,</span> un avec l’identificateur d’exemplaire <span style="white-space:nowrap">« &nbsp;1&nbsp; »</span> qui est disponible et un avec l’identificateur d’exemplaire <span style="white-space:nowrap">« &nbsp;2&nbsp; »</span> qui n’est pas disponible.</p></li>
-<li><p>Le membre réserve un exemplaire du livre qui est disponible.</p></li>
-<li><p>Le système confirme la réservation en affichant un numéro de réservation avec le nom du membre et le code de l’exemplaire du livre.</p></li>
+<li>Le membre choisit la fonction «&nbsp;recherche&nbsp;» et saisit du texte décrivant le livre (par exemple, une partie du titre, «&nbsp;UML&nbsp;»).</li>
+<li>Le système affiche une liste de livres (le titre, l’auteur et l’année) correspondant à la recherche, par exemple, «&nbsp;UML2 et le design patterns, Craig Larman, 2005&nbsp;» et «&nbsp;UML par la pratique, Pascal Rocques, 2009&nbsp;».</li>
+<li>Le membre choisit un livre parmi les résultats, par exemple, «&nbsp;UML2 et les design patterns, Craig Larman, 2005&nbsp;».</li>
+<li>Le système affiche les informations détaillées du livre (le titre, l’auteur, le numéro ISBN, la maison d’édition, le numéro de l’édition et l’année) ainsi que la liste de tous les exemplaires du livre indiquant s’ils sont disponibles ou pas, par exemple, deux exemplaires du livre «&nbsp;UML2 et les design patterns&nbsp;», un avec l’identificateur d’exemplaire «&nbsp;1&nbsp;» qui est disponible et un avec l’identificateur d’exemplaire «&nbsp;2&nbsp;» qui n’est pas disponible.</li>
+<li>Le membre réserve un exemplaire du livre qui est disponible.</li>
+<li>Le système confirme la réservation en affichant un numéro de réservation avec le nom du membre et le code de l’exemplaire du livre.</li>
 </ol>
-<p>Extensions (scénarios <span style="white-space:nowrap">alternatifs)&nbsp; :</span></p>
+<p>Extensions (scénarios <span style="white-space:nowrap">alternatifs) :</span></p>
 <ol start="2" type="1">
-<li><p>Aucun livre ne correspond au texte de la recherche.</p>
+<li>Aucun livre ne correspond au texte de la recherche.
 <ol type="1">
-<li><p>Le système affiche un message indiquant qu’aucun livre n’a été trouvé.</p></li>
-<li><p>Le membre lance une nouvelle recherche.</p></li>
+<li>Le système affiche un message indiquant qu’aucun livre n’a été trouvé.</li>
+<li>Le membre lance une nouvelle recherche.</li>
 </ol></li>
 </ol>
 <!-- -->
 <ol start="4" type="1">
-<li><p>Tous les exemplaires ne sont pas disponibles.</p>
+<li>Tous les exemplaires ne sont pas disponibles.
 <ol type="1">
-<li><p>Le système affiche toutes les informations du livre et des exemplaires, mais un message indique qu’il n’est pas possible de réserver, faute d’exemplaires disponibles.</p></li>
-<li><p>Le membre lance une nouvelle recherche.</p></li>
+<li>Le système affiche toutes les informations du livre et des exemplaires, mais un message indique qu’il n’est pas possible de réserver, faute d’exemplaires disponibles.</li>
+<li>Le membre lance une nouvelle recherche.</li>
 </ol></li>
 </ol>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-craig_uml_2005" class="csl-entry" role="doc-biblioentry">
+Larman, Craig. 2005. <em><span>UML</span> 2 et design patterns</em>. 3ᵉ éd. Paris: Village Mondial.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -507,8 +541,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Exercice_Classes_conceptuelles_dans_le_MDD_suite.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Exercice MDD (classes, attributs, associations)</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Exercice_Diagramme_de_classes_conceptuelles_MDD.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Exercice : Diagramme de classes conceptuelles (MDD)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
