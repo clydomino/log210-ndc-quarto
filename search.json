@@ -642,5 +642,19 @@
     "title": "Appendix F — Diagrammes de séquence système (DSS)",
     "section": "",
     "text": "Vous pouvez le dessiner à la main et en prendre une photo.\nVous pouvez également utiliser PlantUML :\n\n\ntutoriel VSCode sur YouTube\nPlantUML Gizmo, module supplémentaire Google Docs,\nPlantText.com\n\n\nJe ne recommande pas LucidChart et d’autres outils ayant juste des profils UML, puisqu’ils ne sont pas bien adaptés (voir les notes de cours de LOG210 pour plus d’explications).\n\nCas d’utilisation - Réserver un livre de la bibliothèque"
+  },
+  {
+    "objectID": "Exercice_Adaptateur_pour_Maps_CF.html",
+    "href": "Exercice_Adaptateur_pour_Maps_CF.html",
+    "title": "Appendix G — Exercice : Adaptateur pour Maps",
+    "section": "",
+    "text": "Google Maps\nBing Maps\nApple Maps\n\nLe système veut obtenir une liste d’étapes (des directions) pour se rendre à une destination à partir d’un point de départ. L’utilisateur du système pourra décider lequel des services lui convient dans les préférences.\nLe but de l’exercice est de déterminer l’interface stable (Protection des variations GRASP) étant donné les variantes des services de calcul d’itinéraires. Cela peut être un diagramme de classe réalisé avec PlantUML."
+  },
+  {
+    "objectID": "Exercice_Critique_d-une_conception.html",
+    "href": "Exercice_Critique_d-une_conception.html",
+    "title": "Appendix H — Exercice : Critique d’une conception",
+    "section": "",
+    "text": "Emojiopoly\n\nI MDD en français\n\n\n\nJ MDD en anglais"
   }
 ]
