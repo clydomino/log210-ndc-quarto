@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Analyse et conception de logiciels - Appendix H — Exercice : Critique d’une conception</title>
+<title>Analyse et conception de logiciels - Appendix K — Exercice : diagramme d’activité</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Exercice_diagramme_d_états_en_classe.html" rel="next">
-<link href="./Exercice_Adaptateur_pour_Maps_CF.html" rel="prev">
+<link href="./Exercice_Identifier_GRASP_dans_GoF.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -71,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Appendix H — <span style="white-space:nowrap">Exercice :</span> Critique d’une conception</h1>
+      <h1 class="quarto-secondary-nav-title">Appendix K — <span style="white-space:nowrap">Exercice :</span> diagramme d’activité</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -82,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title d-none d-lg-block">Appendix H — <span style="white-space:nowrap">Exercice :</span> Critique d’une conception</h1>
+      <h1 class="title d-none d-lg-block">Appendix K — <span style="white-space:nowrap">Exercice :</span> diagramme d’activité</h1>
                       </div>
   </div>
     
@@ -264,7 +263,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercice_Critique_d-une_conception.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title"><span style="white-space:nowrap">Exercice :</span> Critique d’une conception</span></a>
+  <a href="./Exercice_Critique_d-une_conception.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">H</span>&nbsp; <span class="chapter-title"><span style="white-space:nowrap">Exercice :</span> Critique d’une conception</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -279,7 +278,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Exercice-diagramme_d_activité.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">K</span>&nbsp; <span class="chapter-title"><span style="white-space:nowrap">Exercice :</span> diagramme d’activité</span></a>
+  <a href="./Exercice-diagramme_d_activité.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">K</span>&nbsp; <span class="chapter-title"><span style="white-space:nowrap">Exercice :</span> diagramme d’activité</span></a>
   </div>
 </li>
       </ul>
@@ -289,14 +288,7 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table des matières</h2>
-   
-  <ul>
-  <li><a href="#mdd-en-français" id="toc-mdd-en-français" class="nav-link active" data-scroll-target="#mdd-en-français"><span class="toc-section-number">I</span>  MDD en français</a></li>
-  <li><a href="#mdd-en-anglais" id="toc-mdd-en-anglais" class="nav-link" data-scroll-target="#mdd-en-anglais"><span class="toc-section-number">J</span>  MDD en anglais</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -304,22 +296,22 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<ol type="1">
-<li><p>Considérer le MDD pour le jeu de Monopoly (voir plus bas pour le MDD en français et en anglais).</p></li>
-<li><p>Visitez <a href="https://jamboard.google.com/d/12ask7dmSv2dVVd115iYJp4wh2NiSYgqOMQogUt-bBD0/edit?usp=sharing">ce jamboard</a> et choisissez la page pour votre équipe.</p></li>
-<li><p>À l’aide des outils de jamboard, faites les remarques sur la conception <strong>surtout par rapport au MDD et le décalage des représentations</strong>.</p></li>
-</ol>
-<p>Emojiopoly</p>
-<section id="mdd-en-français" class="level1" data-number="I">
-<h1 data-number="I"><span class="header-section-number">I</span> MDD en français</h1>
-<p><img src="images/media/image16.png" class="img-fluid"></p>
-</section>
-<section id="mdd-en-anglais" class="level1" data-number="J">
-<h1 data-number="J"><span class="header-section-number">J</span> MDD en anglais</h1>
-<p><img src="images/media/image15.png" class="img-fluid"></p>
+<p>Dessinez un diagramme d’activité qui modélise ce qui se passe lorsque vous faites un devoir dans Google Classroom. Votre diagramme doit comprendre les activités de l’enseignant et de l’étudiant. Le devoir doit être un objet dans le diagramme.</p>
+<blockquote class="blockquote">
+<p><em>Vous pouvez le dessiner à la main et en prendre une photo.</em></p>
+<p><em>Vous pouvez également utiliser <span style="white-space:nowrap">PlantUML :</span></em></p>
+</blockquote>
+<ul>
+<li><p><em><a href="https://www.youtube.com/watch?v=xkwJ9GwgZJU">tutoriel VSCode sur YouTube</a></em></p></li>
+<li><p><em><a href="https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571">PlantUML Gizmo</a>, module supplémentaire Google Docs,</em></p></li>
+<li><p><a href="https://www.planttext.com/"><em>PlantText.com</em></a></p></li>
+</ul>
+<blockquote class="blockquote">
+<p><em>Je ne recommande pas Lucidchart ou d’autres outils ayant juste des profils UML, puisqu’ils ne sont pas bien adaptés (voir les notes de cours de LOG210 pour plus d’explications).</em></p>
+</blockquote>
+<p>(Votre [diagramme] devrait apparaître plus bas)</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -436,14 +428,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Exercice_Adaptateur_pour_Maps_CF.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">G</span>&nbsp; <span class="chapter-title"><span style="white-space:nowrap">Exercice :</span> Adaptateur pour Maps</span></span>
+      <a href="./Exercice_Identifier_GRASP_dans_GoF.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">J</span>&nbsp; <span class="chapter-title"><span style="white-space:nowrap">Exercice :</span> Identifier GRASP dans GoF</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Exercice_diagramme_d_états_en_classe.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">I</span>&nbsp; <span class="chapter-title">Exercices diagramme d’états</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

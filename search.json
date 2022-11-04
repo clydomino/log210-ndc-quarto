@@ -725,7 +725,7 @@
     "href": "Exercice_Identifier_GRASP_dans_GoF.html#méthode-template",
     "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
     "section": "J.6 Méthode Template",
-    "text": "J.6 Méthode Template\n \nPatron TEMPLATE METHOD"
+    "text": "J.6 Méthode Template\nIdentifiez les 4 principes GRASP dans le patron Méthode Template, selon les directives dans les notes de cours à la section 14.3 :\n \nPatron TEMPLATE METHOD"
   },
   {
     "objectID": "Exercice_Identifier_GRASP_dans_GoF.html#commande",
@@ -754,5 +754,12 @@
     "title": "Appendix J — Exercice : Identifier GRASP dans GoF",
     "section": "J.10 Façade",
     "text": "J.10 Façade\nIdentifiez les 4 principes GRASP dans le patron Façade, selon les directives dans les notes de cours à la section 14.3 :"
+  },
+  {
+    "objectID": "Exercice-diagramme_d_activité.html",
+    "href": "Exercice-diagramme_d_activité.html",
+    "title": "Appendix K — Exercice : diagramme d’activité",
+    "section": "",
+    "text": "Vous pouvez le dessiner à la main et en prendre une photo.\nVous pouvez également utiliser PlantUML :\n\n\ntutoriel VSCode sur YouTube\nPlantUML Gizmo, module supplémentaire Google Docs,\nPlantText.com\n\n\nJe ne recommande pas Lucidchart ou d’autres outils ayant juste des profils UML, puisqu’ils ne sont pas bien adaptés (voir les notes de cours de LOG210 pour plus d’explications).\n\n(Votre [diagramme] devrait apparaître plus bas)"
   }
 ]
