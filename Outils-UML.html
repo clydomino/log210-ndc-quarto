@@ -389,10 +389,27 @@ div.csl-indent {
 
 <p>Le chapitre F20/A22&nbsp;<i class="fa-solid fa-book"></i>&nbsp;définit quelques termes importants pour la modélisation avec UML et les outils.</p>
 <p>En mode esquisse, lorsqu’on dessine un modèle sur un tableau blanc ou un papier, un outil pratique pour numériser le tout est <strong>Microsoft Lens</strong> (<a href="https://play.google.com/store/apps/details?id=com.microsoft.office.officelens&amp;hl=fr_CA">Android</a> ou <a href="https://apps.apple.com/ca/app/microsoft-office-lens-pdf-scan/id975925059">iOS</a>). Les filtres pour supprimer les reflets sur les tableaux blancs sont impeccables.</p>
-<div class="quarto-figure quarto-figure-center">
+<div id="fig-OfficeLens" class="quarto-layout-panel">
 <figure class="figure">
-<p><img src="images/OfficeLensWhiteBoard.jpg" class="img-fluid figure-img" width="200"></p>
-<p></p><figcaption class="figure-caption">Microsoft Lens peut détecter le cadre d’un dessin sur un tableau blanc ou papier et le transformer, même si on n’est pas droit devant le dessin.</figcaption><p></p>
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-beforeLens" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/Before-Office_Lens.jpg" class="img-fluid figure-img" data-ref-parent="fig-OfficeLens"></p>
+<p></p><figcaption class="figure-caption">(a) Capture</figcaption><p></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell quarto-layout-cell-subref" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-afterLens" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="images/After-Office_Lens.jpg" class="img-fluid figure-img" data-ref-parent="fig-OfficeLens"></p>
+<p></p><figcaption class="figure-caption">(b) Résultat</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;13.1: Microsoft Lens peut détecter le cadre d’un dessin sur un tableau blanc ou papier et le transformer, même si on n’est pas droit devant le dessin.</figcaption><p></p>
 </figure>
 </div>
 <div class="callout-caution callout callout-style-default callout-captioned">
@@ -416,21 +433,21 @@ Mise en garde
 <li>il est populaire (utilisé par des ingénieurs chez Google pour documenter Android, Pay, <span style="white-space:nowrap">etc.) ;</span></li>
 <li>il existe plusieurs supports pour les outils de <span style="white-space:nowrap">documentation :</span>
 <ul>
-<li>extension <a href="https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml">PlantUML pour VisualStudio Code</a> (<a href="#fig-PlantUMLVSCode">figure&nbsp;<span>13.1</span></a>) avec <a href="https://www.youtube.com/watch?v=xkwJ9GwgZJU">tutoriel</a>&nbsp;<i class="fa-brands fa-youtube"></i>;</li>
-<li>extension <a href="https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571?pann=cwsdp&amp;hl=en">PlantUML Gizmo</a> pour Google Docs et Google Slides, développée en 2014 par le professeur Christopher Fuhrman dans le cadre de son travail à l’ÉTS (<a href="#fig-PlantUMLGizmo">figure&nbsp;<span>13.2</span></a>)</li>
+<li>extension <a href="https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml">PlantUML pour VisualStudio Code</a> (<a href="#fig-PlantUMLVSCode">figure&nbsp;<span>13.2</span></a>) avec <a href="https://www.youtube.com/watch?v=xkwJ9GwgZJU">tutoriel</a>&nbsp;<i class="fa-brands fa-youtube"></i>;</li>
+<li>extension <a href="https://gsuite.google.com/marketplace/app/plantuml_gizmo/950520042571?pann=cwsdp&amp;hl=en">PlantUML Gizmo</a> pour Google Docs et Google Slides, développée en 2014 par le professeur Christopher Fuhrman dans le cadre de son travail à l’ÉTS (<a href="#fig-PlantUMLGizmo">figure&nbsp;<span>13.3</span></a>)</li>
 </ul></li>
 </ul>
 <div id="fig-PlantUMLVSCode" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/PlantUMLVSCode.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;13.1: L’extension PlantUML pour VisualStudio Code.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;13.2: L’extension PlantUML pour VisualStudio Code.</figcaption><p></p>
 </figure>
 </div>
 <p>Pour un débutant, le langage PlantUML peut sembler plus compliqué qu’utiliser un outil graphique comme Lucidchart. Cependant, pour beaucoup de diagrammes (comme les diagrammes de séquence), ça peut être plus long à créer ou à modifier. Bien que ces outils aient des gabarits ou des modes «&nbsp;UML&nbsp;», ceux-ci ne sont pas toujours conviviaux ou complets. C’est souvent juste des objets groupés et le vrai sens de la notation UML n’est pas considéré.</p>
-<p>Par exemple, une ligne de vie dans un diagramme de séquence est toujours verticale, mais un éditeur graphique quelconque permet de l’orienter dans n’importe quel sens. Ça peut prendre beaucoup de clics pour effectuer une modification et on peut obtenir des résultats intermédiaires qui n’ont aucun sens en UML (voir la <a href="#fig-LucidchartUML">figure&nbsp;<span>13.4</span></a>). Il est possible de corriger le diagramme, mais en combien de <span style="white-space:nowrap">clics ?</span> C’est très vite tannant.</p>
+<p>Par exemple, une ligne de vie dans un diagramme de séquence est toujours verticale, mais un éditeur graphique quelconque permet de l’orienter dans n’importe quel sens. Ça peut prendre beaucoup de clics pour effectuer une modification et on peut obtenir des résultats intermédiaires qui n’ont aucun sens en UML (voir la <a href="#fig-LucidchartUML">figure&nbsp;<span>13.5</span></a>). Il est possible de corriger le diagramme, mais en combien de <span style="white-space:nowrap">clics ?</span> C’est très vite tannant.</p>
 <section id="exemples-de-diagramme-avec-plantuml" class="level2" data-number="13.1">
 <h2 data-number="13.1" class="anchored" data-anchor-id="exemples-de-diagramme-avec-plantuml"><span class="header-section-number">13.1</span> Exemples de diagramme avec PlantUML</h2>
-<p>Dans le menu «&nbsp;Select sample diagram&nbsp;» de PlantUML Gizmo (Google Docs), il y a plusieurs exemples de diagrammes utilisés dans le cadre de ce manuel et le livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> (voir la <a href="#fig-GizmoSamples">figure&nbsp;<span>13.3</span></a>).</p>
+<p>Dans le menu «&nbsp;Select sample diagram&nbsp;» de PlantUML Gizmo (Google Docs), il y a plusieurs exemples de diagrammes utilisés dans le cadre de ce manuel et le livre de <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span> (voir la <a href="#fig-GizmoSamples">figure&nbsp;<span>13.4</span></a>).</p>
 </section>
 <section id="astuces-plantuml" class="level2" data-number="13.2">
 <h2 data-number="13.2" class="anchored" data-anchor-id="astuces-plantuml"><span class="header-section-number">13.2</span> Astuces PlantUML</h2>
@@ -463,19 +480,19 @@ La clé est en fait une représentation compressée du code source.</li>
 <div id="fig-PlantUMLGizmo" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/PlantUMLGizmoSlides.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;13.2: PlantUML Gizmo pour Google Docs et Google Slides.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;13.3: PlantUML Gizmo pour Google Docs et Google Slides.</figcaption><p></p>
 </figure>
 </div>
 <div id="fig-GizmoSamples" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/SelectSampleDiagramGizmo.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;13.3: PlantUML Gizmo offre plusieurs exemples de diagramme UML.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;13.4: PlantUML Gizmo offre plusieurs exemples de diagramme UML.</figcaption><p></p>
 </figure>
 </div>
 <div id="fig-LucidchartUML" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="images/LucidchartDSSBotched.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Figure&nbsp;13.4: Exemple de tentative de créer un diagramme de séquence système (DSS) avec Lucidcharts. C’est principalement un éditeur graphique avec les éléments graphiques UML qui sont essentiellement des éléments graphiques composés. Il n’y a pas de sémantique UML dans l’outil. Par exemple, un «&nbsp;message&nbsp;» UML dans un diagramme de séquence dans Lucidcharts est juste une ligne groupée avec un texte. Elle peut se coller dynamiquement à d’autres éléments en se transformant en courbe (!) lorsque vous déplacez un bloc «&nbsp;loop&nbsp;». La ligne de vie de l’acteur Étudiant se transforme en diagonale lorsque l’acteur est déplacé à droite. Un vrai message UML est normalement toujours à l’horizontale et une vraie ligne de vie est toujours à la verticale. Puisque Lucidcharts ne connaît pas cette sémantique, vous risquez de perdre beaucoup de temps à faire des diagrammes UML avec ce genre d’outil.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;13.5: Exemple de tentative de créer un diagramme de séquence système (DSS) avec Lucidcharts. C’est principalement un éditeur graphique avec les éléments graphiques UML qui sont essentiellement des éléments graphiques composés. Il n’y a pas de sémantique UML dans l’outil. Par exemple, un «&nbsp;message&nbsp;» UML dans un diagramme de séquence dans Lucidcharts est juste une ligne groupée avec un texte. Elle peut se coller dynamiquement à d’autres éléments en se transformant en courbe (!) lorsque vous déplacez un bloc «&nbsp;loop&nbsp;». La ligne de vie de l’acteur Étudiant se transforme en diagonale lorsque l’acteur est déplacé à droite. Un vrai message UML est normalement toujours à l’horizontale et une vraie ligne de vie est toujours à la verticale. Puisque Lucidcharts ne connaît pas cette sémantique, vous risquez de perdre beaucoup de temps à faire des diagrammes UML avec ce genre d’outil.</figcaption><p></p>
 </figure>
 </div>
 
