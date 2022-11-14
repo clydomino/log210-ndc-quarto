@@ -249,7 +249,14 @@
     "href": "GRASP.html#grasp-et-patterns-gof",
     "title": "6  Principes GRASP",
     "section": "6.4 GRASP et Patterns GoF",
-    "text": "6.4 GRASP et Patterns GoF\nOn peut voir les principes GRASP comme des généralisations (principes de base) des patterns GoF. Voir la section Décortiquer les patterns GoF avec GRASP pour plus d’informations.\n\n\n\n\nFord, Neal. 2009. « Evolutionary architecture and emergent design: Investigating architecture and design ». {CT}316. http://www.ibm.com/developerworks/library/j-eaed1/.\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
+    "text": "6.4 GRASP et Patterns GoF\nOn peut voir les principes GRASP comme des généralisations (principes de base) des patterns GoF. Voir la section Décortiquer les patterns GoF avec GRASP pour plus d’informations."
+  },
+  {
+    "objectID": "GRASP.html#exercice-grasp-polymorphisme",
+    "href": "GRASP.html#exercice-grasp-polymorphisme",
+    "title": "6  Principes GRASP",
+    "section": "6.5 Exercice GRASP Polymorphisme",
+    "text": "6.5 Exercice GRASP Polymorphisme\nSoit le diagramme de classe modélisant l’exemple à Replace Conditional with Polymorphism :\nBirdtype : StringnumberOfCoconuts : numbervoltage : numbergetPlumage() : String\nAppliquez GRASP Polymorphisme pour le code suivant :\nget plumage() {\n    switch (this.type) {\n        case 'EuropeanSwallow':\n            return \"average\";\n        \n        case 'AfricanSwallow':\n            return (this.numberOfCoconuts &gt; 2) ? \"tired\" : \"average\";\n        \n        case 'NorwegianBlueParrot':\n            return (this.voltage &gt; 100) ? \"scorched\" : \"beautiful\";\n        \n        default:\n            return \"unknown\";\n    }\n}\n\n\n\n\nFord, Neal. 2009. « Evolutionary architecture and emergent design: Investigating architecture and design ». {CT}316. http://www.ibm.com/developerworks/library/j-eaed1/.\n\n\nLarman, Craig. 2005. UML 2 et design patterns. 3ᵉ éd. Paris: Village Mondial."
   },
   {
     "objectID": "DetteTechnique.html",
