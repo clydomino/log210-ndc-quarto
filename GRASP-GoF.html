@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -178,6 +178,7 @@ div.csl-indent {
   <div class="quarto-title-meta">
 
       
+    
       
     </div>
     
@@ -545,12 +546,12 @@ Country: null
 <li>Forte cohésion</li>
 <li>Protection des variations</li>
 </ul>
-<p>Êtes-vous en mesure d’expliquer dans ce contexte comment Adaptateur est relié à ces <span style="white-space:nowrap">principes ?</span> C’est-à-dire, pouvez-vous identifier les GRASP dans le pattern <span style="white-space:nowrap">Adaptateur ?</span></p>
+<p>Êtes-vous en mesure d’expliquer dans ce contexte comment Adaptateur est relié à ces <span style="white-space:nowrap">principes ?</span> Pouvez-vous identifier les GRASP dans le pattern <span style="white-space:nowrap">Adaptateur ?</span></p>
 </section>
 <section id="sec-GRASP_Adaptateur" class="level2" data-number="14.3">
 <h2 data-number="14.3" class="anchored" data-anchor-id="sec-GRASP_Adaptateur"><span class="header-section-number">14.3</span> Identifier les GRASP dans les GoF</h2>
-<p>Pour identifier les principes GRASP dans un pattern GoF comme Adaptateur, on rappelle la définition de chaque principe GRASP et on essaie d’imaginer le problème qui pourrait exister et comment le principe (et le pattern GoF) résout le problème.</p>
-<p>Référez-vous à la <a href="#fig-Fig23_1">figure&nbsp;<span>14.1</span></a> du pattern Adaptateur pour les sections suivantes.</p>
+<p>Pour identifier les principes GRASP dans un pattern GoF comme Adaptateur, on rappelle la définition de chaque principe GRASP et on essaie d’imaginer le problème qui pouvait exister éventuellement. Ensuite, on explique comment le principe (et le pattern GoF) résout le problème.</p>
+<p>Consultez la <a href="#fig-Fig23_1">figure&nbsp;<span>14.1</span></a> du pattern Adaptateur pour les sections suivantes.</p>
 <section id="polymorphisme" class="level3" data-number="14.3.1">
 <h3 data-number="14.3.1" class="anchored" data-anchor-id="polymorphisme"><span class="header-section-number">14.3.1</span> Polymorphisme</h3>
 <p>Selon <span class="citation" data-cites="craig_uml_2005">Larman (<a href="references.html#ref-craig_uml_2005" role="doc-biblioref">2005</a>)</span><span style="white-space:nowrap"> :</span></p>
@@ -623,14 +624,14 @@ Country: null
 <h2 data-number="14.4" class="anchored" data-anchor-id="grasp-et-réusinage"><span class="header-section-number">14.4</span> GRASP et réusinage</h2>
 <p>Il y a des liens entre les GRASP et les activités de <a href="Réusinage.html">Réusinage (Refactorisation)</a>. Alors, un IDE qui automatise les <em>refactorings</em> peut vous aider à appliquer certains GRASP.</p>
 <ul>
-<li>GRASP Polymorphisme est relié à <a href="https://refactoring.com/catalog/replaceTypeCodeWithSubclasses.html">Replace Type Code with Subclasses</a> et <a href="https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html">Replace conditional with polymorphism</a> – attention, il vaut mieux appliquer ce dernier seulement quand il y a des instructions conditionnelles (<code>switch</code>) répétées à plusieurs endroits dans le code.</li>
-<li>GRASP Fabrication pure est relié à <a href="https://refactoring.com/catalog/extractClass.html">Extract class</a>.</li>
-<li>GRASP Indirection est relié à <a href="https://refactoring.com/catalog/extractFunction.html">Extract function</a> et <a href="https://refactoring.com/catalog/moveFunction.html">Move function</a>.</li>
+<li>GRASP Polymorphisme est relié à <a href="https://refactoring.com/catalog/replaceTypeCodeWithSubclasses.html"><em>Replace Type Code with Subclasses</em></a> et <a href="https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html"><em>Replace conditional with polymorphism</em></a> – attention, il vaut mieux appliquer ce dernier seulement quand il y a des instructions conditionnelles (<code>switch</code>) répétées à plusieurs endroits dans le code.</li>
+<li>GRASP Fabrication pure est relié à <a href="https://refactoring.com/catalog/extractClass.html"><em>Extract class</em></a>.</li>
+<li>GRASP Indirection est relié à <a href="https://refactoring.com/catalog/extractFunction.html"><em>Extract function</em></a> et <a href="https://refactoring.com/catalog/moveFunction.html"><em>Move function</em></a>.</li>
 </ul>
 </section>
 <section id="exercices" class="level2" data-number="14.5">
 <h2 data-number="14.5" class="anchored" data-anchor-id="exercices"><span class="header-section-number">14.5</span> Exercices</h2>
-<p>Pour ces exercices, suivre le modèle pour décortiquer le patron Adaptateur, illustré à la <span class="quarto-unresolved-ref">?fig-Ex_Fig23_3</span>.</p>
+<p>Pour ces exercices, suivez le modèle pour décortiquer le patron Adaptateur, illustré à la <a href="#fig-Fig23_3">figure&nbsp;<span>14.2</span></a>.</p>
 <p>Une bonne ressource pour les patterns GoF est la <span style="white-space:nowrap">suivante :</span></p>
 <p><a href="https://fuhrmanator.github.io/oodp-horstmann/htm/index_fr_en.html">https://fuhrmanator.github.io/oodp-horstmann/htm/index_fr_en.html</a></p>
 <div class="callout-tip callout callout-style-default callout-captioned">
@@ -727,7 +728,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copié");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copié");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -763,24 +781,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -788,7 +824,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
