@@ -87,6 +87,7 @@ div.csl-indent {
   }
 </style>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -309,7 +310,17 @@ div.csl-indent {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table des matières</h2>
+   
+  <ul>
+  <li><a href="#exercice-faute-erreur-échec" id="toc-exercice-faute-erreur-échec" class="nav-link active" data-scroll-target="#exercice-faute-erreur-échec"><span style="white-space:nowrap">Exercice :</span> Faute, Erreur, Échec</a>
+  <ul class="collapse">
+  <li><a href="#scénario-1-guichet-automatique" id="toc-scénario-1-guichet-automatique" class="nav-link" data-scroll-target="#scénario-1-guichet-automatique">Scénario <span style="white-space:nowrap">1 :</span> Guichet automatique</a></li>
+  <li><a href="#scénario-2-vaisseau-spatial" id="toc-scénario-2-vaisseau-spatial" class="nav-link" data-scroll-target="#scénario-2-vaisseau-spatial">Scénario <span style="white-space:nowrap">2 :</span> Vaisseau spatial</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -356,6 +367,26 @@ Important
 <p>L’utilisation de services dans le nuage (infonuagique) amène une redondance de serveurs. Cependant, même un service web a besoin de <a href="https://aws.amazon.com/about-aws/global-infrastructure/">redondance dans les zones géographiques</a>, car une erreur de configuration ou une crise régionale (ouragan, tremblement de terre) pourrait affecter toute une grappe de serveurs.</p>
 </div>
 </div>
+<section id="exercice-faute-erreur-échec" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="exercice-faute-erreur-échec"><span style="white-space:nowrap">Exercice :</span> Faute, Erreur, Échec</h2>
+<p>Pour chaque scénario, indiquez la faute, l’erreur et l’échec (selon les définitions dans les notes de <span style="white-space:nowrap">cours) :</span></p>
+<section id="scénario-1-guichet-automatique" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="scénario-1-guichet-automatique">Scénario <span style="white-space:nowrap">1 :</span> Guichet automatique</h3>
+<p>Lors de son contrôle d’un guichet automatique, un technicien constate qu’il n’y a plus de billets. Alors, il remet des billets de 20$ et 50<span class="math inline">\(. Le prochain client qui utilise ce guichet automatique indique qu’il veut retirer 100\)</span>, mais il est surpris quand il reçoit 5 billets de 50$ (pour 250$).</p>
+<ul>
+<li><p><span style="white-space:nowrap">Faute :</span> Le technicien a mal posé les billets</p></li>
+<li><p><span style="white-space:nowrap">Erreur :</span> Client constate qu’il reçoit plus d’argent que demandé</p></li>
+<li><p><span style="white-space:nowrap">Échec :</span> Trop d’argent a été versé vers le client</p></li>
+</ul>
+</section>
+<section id="scénario-2-vaisseau-spatial" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="scénario-2-vaisseau-spatial">Scénario <span style="white-space:nowrap">2 :</span> Vaisseau spatial</h3>
+<p>Une mise à jour du logiciel de contrôle sur un vaisseau spatial est effectuée par un ingénieur sur Terre. Ce nouveau programme contient une mauvaise référence pour stocker les valeurs de configuration du réacteur. Lorsque le programme effectue ce stockage, il y a une corruption du programme qui contrôle l’orientation de l’antenne pour la communication avec Terre. Ensuite, l’antenne ne pointe plus vers Terre et la communication est coupée à jamais.</p>
+<ul>
+<li><p><span style="white-space:nowrap">Faute :</span></p></li>
+<li><p><span style="white-space:nowrap">Erreur :</span></p></li>
+<li><p><span style="white-space:nowrap">Échec :</span></p></li>
+</ul>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
@@ -363,6 +394,8 @@ Important
 Hanmer, Robert. 2007. <em>Patterns for <span>Fault</span> <span>Tolerant</span> <span>Software</span></em>. 1ʳᵉ éd. Chichester, England ; Hoboken, NJ: Wiley.
 </div>
 </div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
